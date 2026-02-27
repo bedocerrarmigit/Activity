@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calificaciones</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="notas.js"></script>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="tarjeta">
+      <h1>Notas</h1>
+      <form id="formulario">
+        <div class="grupo-formulario">
+          <label for="identificacion">Identificación</label>
+          <input type="text" id="identificacion" required>
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" required>
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="apellido">Apellidos</label>
+          <input type="text" id="apellido" required>
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="genero">Género</label>
+          <select id="genero" required>
+            <option value="">Seleccione...</option>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+          </select>
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="semestre">Semestre</label>
+          <input type="text" id="semestre" required>
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="materia">Materia</label>
+          <input type="text" id="materia" required>
+        </div>
+
+        <label>Calificaciones (1.0 - 5.0)</label>
+        <div class="contenedor-notas">
+          <div class="grupo-formulario">
+            <input type="number" step="0.1" min="1.0" max="5.0" id="nota1" placeholder="Nota 1" required>
+          </div>
+          <div class="grupo-formulario">
+            <input type="number" step="0.1" min="1.0" max="5.0" id="nota2" placeholder="Nota 2" required>
+          </div>
+          <div class="grupo-formulario">
+            <input type="number" step="0.1" min="1.0" max="5.0" id="nota3" placeholder="Nota 3" required>
+          </div>
+          <div class="grupo-formulario">
+            <input type="number" step="0.1" min="1.0" max="5.0" id="nota4" placeholder="Nota 4" required>
+          </div>
+        </div>
+        <div id="mensaje-error" class="mensaje-error"></div>
+
+        <button type="submit">Calcular Promedio</button>
+      </form>
+
+      <div id="resultados">
+        <div class="elemento-resultado">
+          <strong>Estudiante:</strong> <span id="res-nombre"></span>
+        </div>
+        <div class="elemento-resultado">
+          <strong>Materia:</strong> <span id="res-materia"></span>
+        </div>
+        <div class="elemento-resultado">
+          <strong>Semestre:</strong> <span id="res-semestre"></span>
+        </div>
+        <div class="elemento-resultado">
+          <strong>Promedio:</strong> <span id="res-promedio"></span>
+        </div>
+        <div class="elemento-resultado">
+          <strong>Estado:</strong> <span id="res-estado"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

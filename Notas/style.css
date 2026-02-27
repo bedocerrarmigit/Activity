@@ -1,0 +1,136 @@
+:root {
+  --color-primario: #4a90e2;
+  --color-secundario: #f5f6fa;
+  --color-acento: #ff6b6b;
+  --color-texto: #2d3436;
+  --fondo-tarjeta: #ffffff;
+  --color-exito: #2ecc71;
+  --color-error: #e74c3c;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--color-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 600px;
+}
+
+.tarjeta {
+  background: var(--fondo-tarjeta);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: aparicion 0.5s ease-out;
+}
+
+@keyframes aparicion {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.grupo-formulario {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  border-color: var(--color-primario);
+  outline: none;
+}
+
+.contenedor-notas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#resultados {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: none;
+}
+
+.elemento-resultado {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.elemento-resultado strong {
+  color: #333;
+}
+
+.estado-aprobado {
+  color: var(--color-exito);
+  font-weight: bold;
+}
+
+.estado-reprobado {
+  color: var(--color-error);
+  font-weight: bold;
+}
+
+.mensaje-error {
+  color: var(--color-error);
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: none;
+}
