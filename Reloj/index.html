@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ángulo entre manecillas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Ángulo entre manecillas</h1>
+
+    <canvas id="reloj" width="260" height="260"></canvas>
+
+    <div class="formulario">
+      <label>
+        Hora (1–12)
+        <input type="number" id="hora" min="1" max="12" placeholder="12" />
+      </label>
+      <label>
+        Minuto (0–59)
+        <input type="number" id="minuto" min="0" max="59" placeholder="0" />
+      </label>
+    </div>
+
+    <button id="calcular">Calcular</button>
+
+    <p id="resultado">---</p>
+  </div>
+
+  <script src="reloj.js"></script>
+</body>
+</html>
